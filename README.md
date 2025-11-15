@@ -1,4 +1,6 @@
-📁 Project Structure
+# Overview of Linear Regression Projects
+
+## 📁  Project Structure
 /omnniPower<br>
     ├── data.csv <br>
     ├── notebook.ipynb<br>
@@ -10,7 +12,7 @@
 
 Each folder is a standalone project with its own dataset and analysis.
 
-Project Summaries
+## Project Summaries
 1. OmniPower – Sales Prediction Using Linear Regression
 
 	This project predicts sales values based on features such as Price and Promotion.
@@ -49,10 +51,10 @@ Project Summaries
 	
 	Scatter plots comparing predictions and actual values
 
-Goal:
-Identify how important housing attributes influence pricing and build a baseline predictive model.
+	Goal:
+	Identify how important housing attributes influence pricing and build a baseline predictive model.
 
-Technologies Used:
+## Technologies Used:
 
 Python
 
@@ -62,7 +64,7 @@ Matplotlib, Seaborn for visualisation
 
 Scikit-learn for model building
 
-Key Concepts Demonstrated
+## Key Concepts Demonstrated
 
 Understanding relationships between features
 
