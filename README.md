@@ -1,36 +1,51 @@
 # Linear Regression Workshop Projects
 
-This repository contains two linear regression projects completed as part of a Machine Learning workshop. Each project demonstrates how to build, train, evaluate, and visualise a linear regression model using scikit-learn.
+This repository contains two small regression studies that turn simple business questions into forecast models.
 
-## Projects
+## Projects at a Glance
 
-### 1. Boston Housing - Simple Linear Regression
-**Folder:** `Boston/`
+| Project | What it predicts | Main result | Business readout |
+| --- | --- | --- | --- |
+| [Boston Housing](Boston/README.md) | Home value | Test R2: 0.371 | Room count helps explain price, but it is only a partial signal |
+| [OmniPower Sales](Omnipower/Readme.md) | Sales volume | Test R2: 0.736 | Price and promotion together give a useful sales forecast |
 
-- **Goal:** Predict median home value (MEDV) from the Boston Housing Dataset
-- **Type:** Simple linear regression (single feature)
-- **Dataset:** `boston.csv`
-- **Notebook:** `Machine_Learning_Linear_Reg_WS1.ipynb`
+## Boston Housing
 
-### 2. OmniPower Sales - Multiple Linear Regression
-**Folder:** `Omnipower/`
+This study looks at whether the number of rooms in a home can help explain its value.
 
-- **Goal:** Predict product sales based on Price and Promotion spending
-- **Type:** Multiple linear regression (two features)
-- **Dataset:** `OmniPower.csv`
-- **Notebook:** `Linear_Reg_WS2_Omnipower.ipynb`
-- **Regression Equation:** Sales = 5730.03 - 54.58 x Price + 3.92 x Promotion
-- **R-squared:** 0.754 (75.4%)
-- **Key Findings:**
-  - Higher price reduces sales (-54.58 per $1 increase)
-  - More promotion spending increases sales (+3.92 per $1 increase)
+![](Boston/images/boston-scatter.png)
 
-## Skills Demonstrated
-- Building simple and multiple linear regression models with scikit-learn
-- Train/test splitting (80/20)
-- Interpreting model coefficients and R-squared values
-- Visualising actual vs predicted values
-- Using seaborn pairplots to explore feature relationships
+![](Boston/images/boston-regression-line.png)
 
-## Tech Stack
-- Python, pandas, matplotlib, seaborn, scikit-learn
+The pattern is positive: homes with more rooms tend to be worth more. The red line shows the average trend the model learned.
+
+- Test R2: `0.371`
+- Test RMSE: about `6.8` thousand dollars
+- Plain-English takeaway: the model is directionally useful, but not precise enough to price homes on its own
+
+[Open the full Boston summary](Boston/README.md)
+
+## OmniPower Sales
+
+This study looks at how price and promotion spending affect sales.
+
+![](Omnipower/images/omnipower-price-sales.png)
+
+![](Omnipower/images/omnipower-actual-vs-predicted.png)
+
+The model found two clear business signals:
+
+- Higher prices are linked to lower sales
+- More promotion spending is linked to higher sales
+
+- Test R2: `0.736`
+- Test RMSE: about `772` sales units
+- Plain-English takeaway: this is a useful planning model and it tracks sales reasonably well
+
+[Open the full OmniPower summary](Omnipower/Readme.md)
+
+## Notes
+
+- The project READMEs are written for non-technical readers.
+- The charts were exported from the notebooks and saved as image files in each project folder.
+- Both studies are baseline linear regression examples, so they show clear trend insights rather than perfect predictions.
