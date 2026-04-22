@@ -1,47 +1,48 @@
-# Multiple Linear Regression - OmniPower Sales Prediction
+# OmniPower Sales: How Price and Promotion Affect Sales
 
-## 1. Project Overview
-The goal of this project is to apply **Multiple Linear Regression** to the OmniPower dataset to predict **Sales** based on **Price** and **Promotion** spending.
-The model learns a linear relationship between the two features and the target variable (Sales).
+This project asks a practical business question:
 
-## 2. Dataset Description
-The dataset (`OmniPower.csv`) contains 34 observations with 3 columns:
-- **Sales** — Number of units sold (dependent variable)
-- **Price** — Product price in dollars (independent variable)
-- **Promotion** — Promotion budget in dollars (independent variable)
+How much do price and promotion spending influence sales?
 
-The data is split into:
-- 80% training data (27 samples)
-- 20% test data (7 samples)
+The model uses two inputs:
 
-## 3. Model & Results
+- `Price`
+- `Promotion`
 
-### Regression Equation
-**Sales = 5730.03 - 54.58 x Price + 3.92 x Promotion**
+## What the model found
 
-### Coefficient Interpretation
-| Coefficient | Value | Meaning |
-|---|---|---|
-| Intercept | 5730.03 | Baseline sales when Price and Promotion are both 0 |
-| Price | -54.58 | Every $1 price increase reduces sales by ~55 units |
-| Promotion | +3.92 | Every $1 increase in promotion spending increases sales by ~4 units |
+- Test R2: `0.736`
+- Test RMSE: about `772` sales units
+- Model equation: `Sales = 5730.03 - 54.58 x Price + 3.92 x Promotion`
 
-### Key Takeaways
-- **Higher price hurts sales** — the negative coefficient confirms the expected inverse relationship between price and demand.
-- **Promotion drives sales** — increased promotion spending has a positive effect on units sold.
-- **R-squared = 0.754 (75.4%)** — the model explains about 75% of the variance in Sales. The remaining ~25% is due to noise or other factors not captured in the model.
+## What this means in plain English
 
-### Example Prediction
-For Price = $50 and Promotion = $200, the model predicts **Sales = 3784 units**.
+The model shows a clear and intuitive business pattern:
 
-## 4. Visualisations
-The notebook includes:
-- **Price vs Sales scatter plot** — shows the negative trend between price and sales
-- **Seaborn pairplot** — displays pairwise relationships and distributions across all variables
-- **Actual vs Predicted Sales** — evaluates model accuracy; points closer to the diagonal indicate better predictions
+- When price goes up, sales usually go down
+- When promotion spending goes up, sales usually go up
 
-## 5. Skills Demonstrated
-- Building a multiple linear regression model with scikit-learn
-- Training, evaluating, and interpreting model coefficients
-- Using R-squared to assess model performance
-- Visualising relationships and model predictions
+The model explains most of the sales movement in the dataset, so it is a useful forecasting baseline for planning and budgeting.
+
+## What the charts show
+
+![](images/omnipower-price-sales.png)
+
+This chart shows the relationship between price and sales. The general pattern is downward, which means higher prices tend to be linked to lower sales.
+
+![](images/omnipower-actual-vs-predicted.png)
+
+This chart compares the model's predictions with the real sales values. The points are reasonably close to the pattern you would want, which is a sign that the model is working well at a baseline level.
+
+## Business takeaway
+
+- Price is an important lever and has a negative effect on sales
+- Promotion is a positive lever and helps lift sales
+- The model is useful for forecasting and scenario planning
+- It is not perfect, but it gives a solid first estimate
+
+## Limitations
+
+- Only two drivers are included
+- Other factors may also affect sales, such as seasonality, competition, and stock availability
+- The dataset is small, so the model should be treated as a baseline rather than a final business rule
