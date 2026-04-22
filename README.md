@@ -1,6 +1,31 @@
 # Linear Regression Workshop Projects
 
-This repository contains two small regression studies that turn simple business questions into forecast models.
+This repository contains two linear regression workshop projects built to demonstrate the full machine learning workflow from data to interpretation.
+
+## Purpose
+
+The purpose of this work is to practice and demonstrate how a basic supervised learning model is built, trained, evaluated, and explained.
+
+The ML problem being solved is:
+
+- Can a simple set of input features be used to predict a target variable with linear regression?
+- Can the model results be interpreted clearly enough to explain what is happening in the data?
+
+In other words, this project is about learning how regression works in practice, not just producing a number.
+
+The answer from the workshop examples is:
+
+- Yes, the workflow is enough to show how linear regression can capture a basic trend
+- No, the simple models are not enough to replace richer modeling or domain expertise
+
+## What This Repository Demonstrates
+
+- Loading a dataset and selecting features
+- Training a linear regression model
+- Making predictions
+- Evaluating model performance with R2 and error measures
+- Interpreting the output in plain language
+- Visualizing the learned relationship with charts
 
 ## Projects at a Glance
 
@@ -11,7 +36,9 @@ This repository contains two small regression studies that turn simple business 
 
 ## Boston Housing
 
-This study looks at whether the number of rooms in a home can help explain its value.
+This is a simple linear regression example using one input feature.
+
+The model looks at whether the number of rooms in a home can help explain its value.
 
 ![](Boston/images/boston-scatter.png)
 
@@ -27,7 +54,9 @@ The pattern is positive: homes with more rooms tend to be worth more. The red li
 
 ## OmniPower Sales
 
-This study looks at how price and promotion spending affect sales.
+This is a multiple linear regression example using two input features.
+
+The model looks at how price and promotion spending affect sales.
 
 ![](Omnipower/images/omnipower-price-sales.png)
 
@@ -46,6 +75,6 @@ The model found two clear business signals:
 
 ## Notes
 
-- The project READMEs are written for non-technical readers.
+- The project READMEs explain the results in non-technical language.
 - The charts were exported from the notebooks and saved as image files in each project folder.
 - Both studies are baseline linear regression examples, so they show clear trend insights rather than perfect predictions.

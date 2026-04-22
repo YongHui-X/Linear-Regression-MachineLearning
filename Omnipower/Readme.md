@@ -4,6 +4,26 @@ This project asks a practical business question:
 
 How much do price and promotion spending influence sales?
 
+## Purpose
+
+The purpose of this project is to see whether two common business levers, price and promotion, can explain sales in a useful way.
+
+The business problem is:
+
+- Can we estimate sales with enough confidence to help with planning?
+- Can we understand which lever pushes sales up or down?
+
+## Did it solve the problem?
+
+Yes, for a baseline forecast.
+
+The model gives a clear and useful answer:
+
+- Higher prices are linked to lower sales
+- More promotion spending is linked to higher sales
+
+That means the model does solve the planning question at a basic level, even though it is not a perfect forecast.
+
 The model uses two inputs:
 
 - `Price`
@@ -40,6 +60,12 @@ This chart compares the model's predictions with the real sales values. The poin
 - Promotion is a positive lever and helps lift sales
 - The model is useful for forecasting and scenario planning
 - It is not perfect, but it gives a solid first estimate
+
+## Final answer
+
+Yes, this model solves the business question well enough to be useful for decision support.
+
+It does not solve sales forecasting perfectly, but it gives a strong first approximation that business teams can act on.
 
 ## Limitations
 

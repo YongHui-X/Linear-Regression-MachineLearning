@@ -4,6 +4,23 @@ This project asks a simple business question:
 
 If a home has more rooms, does it usually cost more?
 
+## Purpose
+
+The purpose of this project is to test whether one easy-to-measure feature, room count, can help explain home value.
+
+The business problem is:
+
+- We want a quick way to estimate whether homes with more rooms are generally worth more
+- We want to know if this single feature is strong enough to be useful on its own
+
+## Did it solve the problem?
+
+Partially.
+
+The model did find the expected direction: more rooms usually means a higher home value.
+
+But the fit is only moderate, so room count alone is not enough to solve the pricing problem on its own.
+
 The model looks at the number of rooms (`RM`) and tries to estimate the home value (`MEDV`).
 
 ## What the model found
@@ -35,6 +52,12 @@ The red line is the average trend the model learned. It is a simple summary of t
 - More rooms usually means a higher home value
 - Room count alone is not enough to explain the full market price
 - The model is useful for a quick directional estimate, not a final valuation
+
+## Final answer
+
+Yes, the model solved the narrow question of whether room count is related to home value.
+
+No, it did not fully solve home pricing, because many other factors also matter.
 
 ## Limitations
 
